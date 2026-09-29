@@ -8,3 +8,9 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))          # run from this fi
 loader = PyPDFLoader("python_guide.pdf")                        # loader
 docs = loader.load()
 print(docs[0])
+
+splitter = RecursiveCharacterTextSplitter.from_language(
+    language=Language.PYTHON,
+    chunk_size=500,
+    chunk_overlap=50
+)
