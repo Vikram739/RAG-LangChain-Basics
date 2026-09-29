@@ -11,7 +11,7 @@ print(docs[0])
 
 splitter = RecursiveCharacterTextSplitter.from_language(
     language=Language.PYTHON,
-    chunk_size=500,
+    chunk_size=1000,
     chunk_overlap=50
 )
 
