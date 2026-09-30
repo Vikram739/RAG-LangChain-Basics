@@ -25,3 +25,19 @@ RAG-LangChain-Basics/
     ├── Document_code_splitter.py           # Load a PDF and split it as Python code
     └── python_guide.pdf                    # Input for the code splitter
 ```
+
+## Setup
+
+```bash
+git clone https://github.com/Vikram739/RAG-LangChain-Basics.git
+cd RAG-LangChain-Basics
+
+pip install langchain-community langchain-text-splitters pypdf tiktoken
+```
+
+| Package | Used for |
+| --- | --- |
+| `langchain-community` | `TextLoader` and `PyPDFLoader` |
+| `langchain-text-splitters` | All the text splitters |
+| `pypdf` | Reading PDF files |
+| `tiktoken` | Counting tokens in `TokenTextSplitter` |
