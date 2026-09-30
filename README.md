@@ -41,3 +41,27 @@ pip install langchain-community langchain-text-splitters pypdf tiktoken
 | `langchain-text-splitters` | All the text splitters |
 | `pypdf` | Reading PDF files |
 | `tiktoken` | Counting tokens in `TokenTextSplitter` |
+
+## Examples
+
+### Document Loader
+
+| Script | What it does |
+| --- | --- |
+| [`textLoader.py`](Document%20Loader/textLoader.py) | Loads `sample.txt` into a LangChain `Document` and prints its text |
+
+### Text Splitters
+
+| Script | Splitter | Settings | Best for |
+| --- | --- | --- | --- |
+| [`CharacterTextSplitter.py`](Text%20Splitters/CharacterTextSplitter.py) | `CharacterTextSplitter` | size 200, overlap 20, split on spaces | Plain text with a clear separator |
+| [`RecursiveCharacterTextSplitter.py`](Text%20Splitters/RecursiveCharacterTextSplitter.py) | `RecursiveCharacterTextSplitter` | size 80, overlap 20 | General text; keeps paragraphs and sentences together when it can |
+| [`TokenTextSplitter.py`](Text%20Splitters/TokenTextSplitter.py) | `TokenTextSplitter` | 10 tokens, overlap 2 | Staying under a model's token limit |
+| [`MarkdownTextSplitter.py`](Text%20Splitters/MarkdownTextSplitter.py) | `MarkdownTextSplitter` | size 100, overlap 10 | Markdown docs, READMEs, notes |
+| [`Document_code_splitter.py`](Text%20Splitters/Document_code_splitter.py) | `RecursiveCharacterTextSplitter.from_language` | Python, size 1000, overlap 50 | Source code and guides with code in them |
+
+### Key terms
+
+- **chunk_size**: the most characters (or tokens) one chunk can hold.
+- **chunk_overlap**: how much of the end of one chunk is repeated at the start of the next, so a sentence cut in half still has context.
+- **separators**: where the splitter prefers to cut. The recursive splitter tries `"\n\n"`, then `"\n"`, then `" "`, and only cuts mid-word as a last resort.
