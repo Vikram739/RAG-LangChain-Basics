@@ -65,3 +65,36 @@ pip install langchain-community langchain-text-splitters pypdf tiktoken
 - **chunk_size**: the most characters (or tokens) one chunk can hold.
 - **chunk_overlap**: how much of the end of one chunk is repeated at the start of the next, so a sentence cut in half still has context.
 - **separators**: where the splitter prefers to cut. The recursive splitter tries `"\n\n"`, then `"\n"`, then `" "`, and only cuts mid-word as a last resort.
+
+## Running the scripts
+
+The text splitter examples can be run from anywhere:
+
+```bash
+python "Text Splitters/RecursiveCharacterTextSplitter.py"
+```
+
+`textLoader.py` opens `sample.txt` by name, so run it from inside its folder:
+
+```bash
+cd "Document Loader"
+python textLoader.py
+```
+
+If you use the VS Code Code Runner extension, add this to `settings.json` so every script runs from its own folder:
+
+```json
+"code-runner.fileDirectoryAsCwd": true
+```
+
+## Notes
+
+- `langchain-community` prints a `DeprecationWarning` on import. It does not stop the scripts from running.
+- `PyPDFLoader` needs `pypdf`. If you see ``ImportError: `pypdf` package not found``, run `pip install pypdf`.
+
+## Next steps
+
+- [ ] Create embeddings for the chunks
+- [ ] Store them in a vector database (FAISS or Chroma)
+- [ ] Retrieve relevant chunks for a question
+- [ ] Pass them to an LLM to generate an answer
