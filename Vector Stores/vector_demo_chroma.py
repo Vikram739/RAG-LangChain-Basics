@@ -14,7 +14,5 @@ pdf_path = Parent_path / "python_guide.pdf"
 # load documents
 
 loader = PyPDFLoader(str(pdf_path))
-docs = loader.load()
-
-print(len(docs))
-print(docs[0])
+docs = loader.load() 
+# print(docs[0])
