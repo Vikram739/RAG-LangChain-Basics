@@ -24,3 +24,7 @@ splitter = RecursiveCharacterTextSplitter.from_language(
     chunk_size=700,
     chunk_overlap = 50
 )
+
+chunks = splitter.split_documents(docs)
+print(len(chunks))
+print(chunks[0])
