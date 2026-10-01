@@ -17,13 +17,16 @@ RAG-LangChain-Basics/
 ├── Document Loader/
 │   ├── sample.txt                          # Short article about RAG
 │   └── textLoader.py                       # Load a .txt file with TextLoader
-└── Text Splitters/
-    ├── CharacterTextSplitter.py            # Split on a single separator
-    ├── RecursiveCharacterTextSplitter.py   # Try separators from largest to smallest
-    ├── TokenTextSplitter.py                # Split by token count
-    ├── MarkdownTextSplitter.py             # Split along Markdown headings
-    ├── Document_code_splitter.py           # Load a PDF and split it as Python code
-    └── python_guide.pdf                    # Input for the code splitter
+├── Text Splitters/
+│   ├── CharacterTextSplitter.py            # Split on a single separator
+│   ├── RecursiveCharacterTextSplitter.py   # Try separators from largest to smallest
+│   ├── TokenTextSplitter.py                # Split by token count
+│   ├── MarkdownTextSplitter.py             # Split along Markdown headings
+│   ├── Document_code_splitter.py           # Load a PDF and split it as Python code
+│   └── python_guide.pdf                    # Input for the code splitter
+└── Vector Stores/
+    ├── vector_demo_chroma.py               # Load a PDF to store in Chroma (in progress)
+    └── python_guide.pdf                    # Input for the vector store demo
 ```
 
 ## Setup
@@ -32,7 +35,7 @@ RAG-LangChain-Basics/
 git clone https://github.com/Vikram739/RAG-LangChain-Basics.git
 cd RAG-LangChain-Basics
 
-pip install langchain-community langchain-text-splitters pypdf tiktoken
+pip install langchain-community langchain-text-splitters pypdf tiktoken langchain-huggingface langchain-chroma
 ```
 
 | Package | Used for |
@@ -41,6 +44,8 @@ pip install langchain-community langchain-text-splitters pypdf tiktoken
 | `langchain-text-splitters` | All the text splitters |
 | `pypdf` | Reading PDF files |
 | `tiktoken` | Counting tokens in `TokenTextSplitter` |
+| `langchain-huggingface` | Local embedding models |
+| `langchain-chroma` | Chroma vector store |
 
 ## Examples
 
