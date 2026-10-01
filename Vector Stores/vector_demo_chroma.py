@@ -16,3 +16,11 @@ pdf_path = Parent_path / "python_guide.pdf"
 loader = PyPDFLoader(str(pdf_path))
 docs = loader.load() 
 # print(docs[0])
+
+# Splitting into chunks...
+
+splitter = RecursiveCharacterTextSplitter.from_language(
+    language=Language.PYTHON,
+    chunk_size=700,
+    chunk_overlap = 50
+)
