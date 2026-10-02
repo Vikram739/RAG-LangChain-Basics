@@ -39,7 +39,8 @@ RAG-LangChain-Basics/
 ├── Retrievers/
 │   ├── README.md                           # Notes for the retrievers topic
 │   └── Source Based Retrievers/
-│       └── wikipedia_retriever.py          # Search Wikipedia with WikipediaRetriever
+│       ├── wikipedia_retriever.py          # Search Wikipedia with WikipediaRetriever
+│       └── vectorestore_retriever.py       # Turn a Chroma store into a retriever
 ├── requirements.txt                        # Python packages
 └── README.md
 ```
