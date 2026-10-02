@@ -34,8 +34,10 @@ RAG-LangChain-Basics/
 │   ├── Document_code_splitter.py           # Load a PDF and split it as Python code
 │   └── python_guide.pdf                    # Input for the code splitter
 ├── Vector Stores/
-│   ├── vector_demo_chroma.py               # Embed chunks, store in Chroma, search them  
+│   ├── vector_demo_chroma.py               # Embed chunks, store in Chroma, search them
 │   └── python_guide.pdf                    # Input for the vector store demo
+├── Retrievers/
+│   └── README.md                           # Notes for the retrievers topic
 ├── requirements.txt                        # Python packages
 └── README.md
 ```
