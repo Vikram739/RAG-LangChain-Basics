@@ -24,9 +24,11 @@ RAG-LangChain-Basics/
 │   ├── MarkdownTextSplitter.py             # Split along Markdown headings
 │   ├── Document_code_splitter.py           # Load a PDF and split it as Python code
 │   └── python_guide.pdf                    # Input for the code splitter
-└── Vector Stores/
-    ├── vector_demo_chroma.py               # Embed chunks, store in Chroma, search them  
-    └── python_guide.pdf                    # Input for the vector store demo
+├── Vector Stores/
+│   ├── vector_demo_chroma.py               # Embed chunks, store in Chroma, search them  
+│   └── python_guide.pdf                    # Input for the vector store demo
+├── requirements.txt                        # Python packages
+└── README.md
 ```
 
 ## Setup
@@ -35,7 +37,7 @@ RAG-LangChain-Basics/
 git clone https://github.com/Vikram739/RAG-LangChain-Basics.git
 cd RAG-LangChain-Basics
 
-pip install langchain-community langchain-text-splitters pypdf tiktoken langchain-huggingface langchain-chroma
+pip install -r requirements.txt
 ```
 
 | Package | Used for |
@@ -46,6 +48,7 @@ pip install langchain-community langchain-text-splitters pypdf tiktoken langchai
 | `tiktoken` | Counting tokens in `TokenTextSplitter` |
 | `langchain-huggingface` | Local embedding models |
 | `langchain-chroma` | Chroma vector store |
+| `sentence-transformers` | Runs the MiniLM embedding model locally |
 
 ## Examples
 
