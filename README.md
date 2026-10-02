@@ -107,7 +107,7 @@ If you use the VS Code Code Runner extension, add this to `settings.json` so eve
 
 ## Next steps
 
-- [ ] Create embeddings for the chunks
-- [ ] Store them in a vector database (FAISS or Chroma)
-- [ ] Retrieve relevant chunks for a question
+- [x] Create embeddings for the chunks
+- [x] Store them in a vector database (Chroma)
+- [x] Retrieve relevant chunks for a question
 - [ ] Pass them to an LLM to generate an answer
