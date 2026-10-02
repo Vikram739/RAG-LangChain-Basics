@@ -48,3 +48,5 @@ results = db.similarity_search(
     query,
     k=1
 )
+
+print(results[0].page_content)
