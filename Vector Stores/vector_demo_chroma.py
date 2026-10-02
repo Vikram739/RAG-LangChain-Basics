@@ -42,3 +42,9 @@ db = Chroma.from_documents(
 
 # Question to search
 query = "What is list?"
+
+# Find the most similar chunk
+results = db.similarity_search(
+    query,
+    k=1
+)
