@@ -114,6 +114,12 @@ cd "Document Loader"
 python textLoader.py
 ```
 
+`vector_demo_chroma.py` finds its PDF on its own, but it saves `chroma_db/` in the folder you run it from:
+
+```bash
+python "Vector Stores/vector_demo_chroma.py"
+```
+
 If you use the VS Code Code Runner extension, add this to `settings.json` so every script runs from its own folder:
 
 ```json
