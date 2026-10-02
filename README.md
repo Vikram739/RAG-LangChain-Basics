@@ -96,6 +96,7 @@ New topic, in progress. A retriever takes a question and returns matching docume
 | Script | Retriever | Settings | What it does |
 | --- | --- | --- | --- |
 | [`wikipedia_retriever.py`](Retrievers/Source%20Based%20Retrievers/wikipedia_retriever.py) | `WikipediaRetriever` | top 3 pages, English | Searches Wikipedia for "New York" and prints the first page |
+| [`vectorestore_retriever.py`](Retrievers/Source%20Based%20Retrievers/vectorestore_retriever.py) | `db.as_retriever()` on Chroma | MiniLM embeddings, top 2 | Stores 4 short documents in memory and returns the 2 closest to "What is Chroma used for?" |
 
 ### Key terms
 
