@@ -37,7 +37,9 @@ RAG-LangChain-Basics/
 │   ├── vector_demo_chroma.py               # Embed chunks, store in Chroma, search them
 │   └── python_guide.pdf                    # Input for the vector store demo
 ├── Retrievers/
-│   └── README.md                           # Notes for the retrievers topic
+│   ├── README.md                           # Notes for the retrievers topic
+│   └── Source Based Retrievers/
+│       └── wikipedia_retriever.py          # Search Wikipedia with WikipediaRetriever
 ├── requirements.txt                        # Python packages
 └── README.md
 ```
@@ -60,6 +62,7 @@ pip install -r requirements.txt
 | `langchain-huggingface` | Local embedding models |
 | `langchain-chroma` | Chroma vector store |
 | `sentence-transformers` | Runs the MiniLM embedding model locally |
+| `wikipedia` | Used by `WikipediaRetriever` to search Wikipedia |
 
 ## Examples
 
