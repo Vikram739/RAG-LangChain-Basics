@@ -25,7 +25,7 @@ RAG-LangChain-Basics/
 │   ├── Document_code_splitter.py           # Load a PDF and split it as Python code
 │   └── python_guide.pdf                    # Input for the code splitter
 └── Vector Stores/
-    ├── vector_demo_chroma.py               # Load a PDF to store in Chroma (in progress)
+    ├── vector_demo_chroma.py               # Embed chunks, store in Chroma, search them  
     └── python_guide.pdf                    # Input for the vector store demo
 ```
 
