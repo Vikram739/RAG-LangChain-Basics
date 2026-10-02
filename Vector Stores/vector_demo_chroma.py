@@ -28,3 +28,7 @@ splitter = RecursiveCharacterTextSplitter.from_language(
 chunks = splitter.split_documents(docs)
 print(len(chunks))
 print(chunks[0])
+
+emd = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+)
