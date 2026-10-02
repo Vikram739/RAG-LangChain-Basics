@@ -11,8 +11,9 @@ Here `db` is the Chroma store built in [`Vector Stores/vector_demo_chroma.py`](.
 
 ## Source based retrievers
 
-These fetch documents from an outside source instead of a local vector store.
+Scripts in the `Source Based Retrievers` folder, grouped by where the documents come from.
 
 | Script | What it does |
 | --- | --- |
 | [`wikipedia_retriever.py`](Source%20Based%20Retrievers/wikipedia_retriever.py) | Searches Wikipedia and returns each page as a LangChain `Document` |
+| [`vectorestore_retriever.py`](Source%20Based%20Retrievers/vectorestore_retriever.py) | Builds an in-memory Chroma store from 4 documents and uses `as_retriever(search_kwargs={"k": 2})` to fetch the top 2 matches |
