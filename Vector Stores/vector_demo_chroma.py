@@ -36,5 +36,6 @@ emd = HuggingFaceEmbeddings(
 
 db = Chroma.from_documents(
     documents=chunks,
-    embedding=emd
+    embedding=emd,
+    persist_directory="./chroma_db"
 )
