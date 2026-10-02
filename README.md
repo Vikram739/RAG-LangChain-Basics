@@ -102,6 +102,8 @@ If you use the VS Code Code Runner extension, add this to `settings.json` so eve
 
 - `langchain-community` prints a `DeprecationWarning` on import. It does not stop the scripts from running.
 - `PyPDFLoader` needs `pypdf`. If you see ``ImportError: `pypdf` package not found``, run `pip install pypdf`.
+- The first run of `vector_demo_chroma.py` downloads the MiniLM model (about 90 MB), so it takes longer.
+- The Chroma database is written to `chroma_db/` in the folder you run the script from. It is listed in `.gitignore`. Running the script again adds the same chunks a second time, so delete `chroma_db/` before rerunning if you want a clean store.
 
 ## Next steps
 
