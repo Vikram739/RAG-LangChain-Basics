@@ -138,4 +138,5 @@ If you use the VS Code Code Runner extension, add this to `settings.json` so eve
 - [x] Create embeddings for the chunks
 - [x] Store them in a vector database (Chroma)
 - [x] Retrieve relevant chunks for a question
+- [ ] Use LangChain retrievers (`as_retriever`) instead of calling the store directly
 - [ ] Pass them to an LLM to generate an answer
