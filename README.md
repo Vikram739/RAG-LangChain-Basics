@@ -85,6 +85,10 @@ pip install -r requirements.txt
 | --- | --- | --- | --- |
 | [`vector_demo_chroma.py`](Vector%20Stores/vector_demo_chroma.py) | `sentence-transformers/all-MiniLM-L6-v2` | Chroma, saved to `./chroma_db` | Splits the PDF into 700 character chunks, embeds them, and returns the chunk closest to "What is list?" |
 
+### Retrievers
+
+New topic, in progress. A retriever wraps a vector store search behind one standard interface (`retriever.invoke(question)`), so it can be dropped into a chain. See [`Retrievers/README.md`](Retrievers/README.md).
+
 ### Key terms
 
 - **chunk_size**: the most characters (or tokens) one chunk can hold.
