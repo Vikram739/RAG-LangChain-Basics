@@ -65,6 +65,12 @@ pip install langchain-community langchain-text-splitters pypdf tiktoken langchai
 | [`MarkdownTextSplitter.py`](Text%20Splitters/MarkdownTextSplitter.py) | `MarkdownTextSplitter` | size 100, overlap 10 | Markdown docs, READMEs, notes |
 | [`Document_code_splitter.py`](Text%20Splitters/Document_code_splitter.py) | `RecursiveCharacterTextSplitter.from_language` | Python, size 1000, overlap 50 | Source code and guides with code in them |
 
+### Vector Stores
+
+| Script | Embeddings | Vector store | What it does |
+| --- | --- | --- | --- |
+| [`vector_demo_chroma.py`](Vector%20Stores/vector_demo_chroma.py) | `sentence-transformers/all-MiniLM-L6-v2` | Chroma, saved to `./chroma_db` | Splits the PDF into 700 character chunks, embeds them, and returns the chunk closest to "What is list?" |
+
 ### Key terms
 
 - **chunk_size**: the most characters (or tokens) one chunk can hold.
