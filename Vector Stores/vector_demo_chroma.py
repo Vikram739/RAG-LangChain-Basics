@@ -49,4 +49,4 @@ results = db.similarity_search(
     k=1
 )
 
-print(results[0].page_content)
+print(results[0].page_content)  
