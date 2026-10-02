@@ -94,6 +94,10 @@ New topic, in progress. A retriever wraps a vector store search behind one stand
 - **chunk_size**: the most characters (or tokens) one chunk can hold.
 - **chunk_overlap**: how much of the end of one chunk is repeated at the start of the next, so a sentence cut in half still has context.
 - **separators**: where the splitter prefers to cut. The recursive splitter tries `"\n\n"`, then `"\n"`, then `" "`, and only cuts mid-word as a last resort.
+- **embedding**: a list of numbers that represents the meaning of a piece of text. Texts with similar meaning get similar numbers.
+- **vector store**: a database that keeps embeddings and finds the ones closest to a query.
+- **similarity search**: embeds the question and returns the `k` closest chunks.
+- **retriever**: a wrapper around a search, so any vector store can be used the same way in a chain.
 
 ## Running the scripts
 
