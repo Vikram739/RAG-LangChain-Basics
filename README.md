@@ -90,7 +90,11 @@ pip install -r requirements.txt
 
 ### Retrievers
 
-New topic, in progress. A retriever wraps a vector store search behind one standard interface (`retriever.invoke(question)`), so it can be dropped into a chain. See [`Retrievers/README.md`](Retrievers/README.md).
+New topic, in progress. A retriever takes a question and returns matching documents through one standard interface (`retriever.invoke(question)`), so it can be dropped into a chain. See [`Retrievers/README.md`](Retrievers/README.md).
+
+| Script | Retriever | Settings | What it does |
+| --- | --- | --- | --- |
+| [`wikipedia_retriever.py`](Retrievers/Source%20Based%20Retrievers/wikipedia_retriever.py) | `WikipediaRetriever` | top 3 pages, English | Searches Wikipedia for "New York" and prints the first page |
 
 ### Key terms
 
@@ -133,6 +137,7 @@ If you use the VS Code Code Runner extension, add this to `settings.json` so eve
 
 - `langchain-community` prints a `DeprecationWarning` on import. It does not stop the scripts from running.
 - `PyPDFLoader` needs `pypdf`. If you see ``ImportError: `pypdf` package not found``, run `pip install pypdf`.
+- Wikipedia rejects requests without a proper User-Agent, which shows up as `JSONDecodeError: Expecting value`. `wikipedia_retriever.py` sets one with `wikipedia.set_user_agent(...)` before searching.
 - The first run of `vector_demo_chroma.py` downloads the MiniLM model (about 90 MB), so it takes longer.
 - The Chroma database is written to `chroma_db/` in the folder you run the script from. It is listed in `.gitignore`. Running the script again adds the same chunks a second time, so delete `chroma_db/` before rerunning if you want a clean store.
 
