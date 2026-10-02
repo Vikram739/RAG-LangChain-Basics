@@ -9,4 +9,10 @@ docs = retriever.invoke("What is a list?")
 
 Here `db` is the Chroma store built in [`Vector Stores/vector_demo_chroma.py`](../Vector%20Stores/vector_demo_chroma.py).
 
-Examples for this topic will be added to this folder.
+## Source based retrievers
+
+These fetch documents from an outside source instead of a local vector store.
+
+| Script | What it does |
+| --- | --- |
+| [`wikipedia_retriever.py`](Source%20Based%20Retrievers/wikipedia_retriever.py) | Searches Wikipedia and returns each page as a LangChain `Document` |
