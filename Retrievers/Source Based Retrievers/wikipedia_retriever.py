@@ -9,11 +9,11 @@ sys.stdout.reconfigure(encoding="utf-8")                    # print non-English 
 wikipedia.set_user_agent("RAG-LangChain-Basics/1.0 (https://github.com/Vikram739/RAG-LangChain-Basics)")
 
 retriever = WikipediaRetriever(
-    top_k_results=1,
+    top_k_results=3,
     lang="en"
 )
 
-query = "WHo is shivaji maharaj?"
+query = "New York"
 
 results = retriever.invoke(query)
 
