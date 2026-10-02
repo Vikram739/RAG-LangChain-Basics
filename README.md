@@ -1,13 +1,13 @@
 # RAG LangChain Basics
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-text%20splitters-1C3C3C?logo=langchain&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-RAG%20basics-1C3C3C?logo=langchain&logoColor=white)
 
-Small, runnable examples of the first two steps of a Retrieval Augmented Generation (RAG) pipeline: **loading documents** and **splitting them into chunks**. Each script does one thing, so you can run it, read the output, and change a parameter to see what happens.
+Small, runnable examples of the first steps of a Retrieval Augmented Generation (RAG) pipeline: **loading documents**, **splitting them into chunks**, **embedding the chunks** and **searching them in a vector store**. Each script does one thing, so you can run it, read the output, and change a parameter to see what happens.
 
 ```
 Load documents  ->  Split into chunks  ->  Embed  ->  Store in vector DB  ->  Retrieve  ->  Generate
-   (this repo)        (this repo)
+    (done)               (done)           (done)            (done)             (done)        (next)
 ```
 
 ## Project structure
