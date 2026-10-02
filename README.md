@@ -10,6 +10,15 @@ Load documents  ->  Split into chunks  ->  Embed  ->  Store in vector DB  ->  Re
     (done)               (done)           (done)            (done)             (done)        (next)
 ```
 
+## Contents
+
+- [Project structure](#project-structure)
+- [Setup](#setup)
+- [Examples](#examples)
+- [Running the scripts](#running-the-scripts)
+- [Notes](#notes)
+- [Next steps](#next-steps)
+
 ## Project structure
 
 ```
