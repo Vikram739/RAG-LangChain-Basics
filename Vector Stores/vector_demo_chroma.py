@@ -32,3 +32,9 @@ print(chunks[0])
 emd = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
+
+
+db = Chroma.from_documents(
+    documents=chunks,
+    embedding=emd
+)
