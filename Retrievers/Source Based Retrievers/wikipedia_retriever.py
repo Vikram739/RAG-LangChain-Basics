@@ -17,7 +17,7 @@ query = "New York"
 
 results = retriever.invoke(query)
 
-print(results)
+print(results[0].page_content)
 
 
 
