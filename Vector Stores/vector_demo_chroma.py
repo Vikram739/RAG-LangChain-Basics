@@ -39,3 +39,6 @@ db = Chroma.from_documents(
     embedding=emd,
     persist_directory="./chroma_db"
 )
+
+# Question to search
+query = "What is list?"
