@@ -1,5 +1,5 @@
 from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 
 # Step 1: Your source documents
@@ -11,7 +11,9 @@ documents = [
 ]
 
 
-embedding_model = OpenAIEmbeddings()
+embedding_model = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+)
 
 db = Chroma.from_documents(
     documents=documents,
